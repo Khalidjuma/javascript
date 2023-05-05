@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .container{
+        width: 50%;
+         margin-top: 50px;
+      
+        background-color: blanchedalmond;
+        height:800px;
+      
+        margin-left: 350px;
+    }
+   
+    .head1{
+
+        /* margin-top: 50px; */
+        color: blueviolet;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        text-decoration: underline;
+
+    }
+
+   
+</style>
+<body>
+
+
+
+    <div class="container">
+
+        <div class="head1">ONLINE QUIZ</div><br>
+
+        <div class="question">
+
+                        <div class="qn1" style="padding-left: 20px;margin-bottom: 10px;">1. field can be</div>
+                            <div class="ans" data-question="1" style="padding-left: 40px;margin-bottom: 20px;" data-answer="discrent or continous">
+                                <input type="radio" name="q1" value="discrent or continous" /><label>discrete or continous</label> <br>
+                                <input type="radio" name="q1" value="discrete only" /><label>discrete only</label> <br>
+                                <input type="radio" name="q1" value="continous only" /><label>continous only</label> 
+                            </div>
+
+
+
+                          
+                            
+        </div>
+
+
+
+
+
+
+        <div class="question">
+
+
+
+
+                <div class="qn1" style="padding-left: 20px;margin-bottom: 10px;">2. field can be</div>
+                <div class="ans" data-question="1" style="padding-left: 40px; margin-bottom: 60px;" data-answer="discrete only">
+                   <input type="radio" name="q2" value="discrent or continous" /><label>discrete or continous</label> <br>
+                   <input type="radio" name="q2" value="discrete only" /><label>discrete only</label> <br>
+                   <input type="radio" name="q2" value="continous only" /><label>continous only</label> 
+                </div>
+               
+            
+</div>
+
+
+<button id="submit-btn" style="margin-left: 50px;padding: 10px;">Submit</button>
+<div id="results" class="results"></div>
+
+        
+
+
+    </div>
+
+        <script>
+                let quiz_container= document.querySelector('.container');
+                let btn =document.querySelector('#sumbit-btn');
+                let result = document.querySelector('#results');
+
+
+                // function to display results and highlight correct answers
+                function showResults() {
+                    // let score = 0;
+
+                    const questions = quiz_container.querySelectorAll(".question");
+
+                    questions.forEach((question) => {
+
+                        const selectedOption = question.querySelector('input[type="radio"]:checked');
+                        const questionNumber = selectedOption.parentElement.getAttribute("data-question");
+                        const correctAnswer = selectedOption.parentElement.getAttribute("data-answer");
+
+
+                         if (selectedOption && selectedOption.value === correctAnswer) {
+                            // score++;
+                            selectedOption.parentElement.classList.add("selected");
+                        } else if (selectedOption) {
+                            selectedOption.parentElement.classList.add("selected");
+                            const correctOption = question.querySelector(`.option[data-question="${questionNumber}"][data-answer="${correctAnswer}"]`);
+                            correctOption.classList.add("selected");
+                        }
+
+
+                });
+
+            }
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+       
+
+
+ 
+     
+
+        function Paragraph() {
+           
+           
+            const para = document.querySelectorAll('h1');
+            let count =0;
+
+            // btn.addEventListener('click',() =>{
+                    
+            //         btn.innerText = 'Change To Small';
+            //    });
+
+
+            para.forEach(h=>{
+
+                const text = h.textContent;
+                count++;
+
+
+                // if (!( text === h.textContent.toUpperCase())) {
+                //     h.textContent= h.textContent.toUpperCase();
+                //     btn = document.querySelector('button').textContent ='Change to Smaller'
+                
+                //     h.textContent= h.textContent.toUpperCase();
+                    
+                   
+                //     h.style.color ='Green';
+                //     const result = h.textContent;
+                //     console.log(`${result} is in uppercase`);
+                //     alert(`All heading are in uppercase ${result} and this is ${count} heading 1`);
+
+                // }
+
+
+                if (( text === h.textContent.toLowerCase())) {
+                    h.textContent= h.textContent.toUpperCase();
+                    btn = document.querySelector('button').textContent ='Change to Smaller';
+                    
+                   
+                
+                    h.textContent= h.textContent.toUpperCase();
+                    
+                   
+                    h.style.color ='Green';
+                    const result = h.textContent;
+                    console.log(`${result} is in uppercase`);
+                    alert(`All heading are in uppercase ${result} and this is ${count} heading 1`);
+
+
+
+                    // document.addEventListener('DOMContentLoaded',function (){
+
+                    
+                    //     button.onclick = function(){
+
+
+                    //         h.textContent= h.textContent.toLowerCase();
+
+                    //         h.style.color ='red';
+                    //         const result = h.textContent;
+                    //         console.log(`${result} is in uppercase`);
+                    //         alert(`All heading are in uppercase ${result} and this is ${count} heading 1`);
+
+                    //     }
+                   
+                        
+
+
+                    // });
+
+                }
+            });
+                   
+                   
+
+               
+        }
+
+        
+
+
+    </script>
+</head>
+<body>
+
+    <div>Do you trust the authors of the files in this folder?
+        Code provides features that may automatically execute files in this folder.
+        
+        If you don't trust the authors of these files, we recommend to continue in restricted mod
+        <h1>wazo la leo</h1>
+        <h1>wazo la leo linahusu </h1>
+        <h1>baadhi ya supported ni kuwahi mapema</h1>
+
+
+        <button onclick="Paragraph()">Click to Capitalize Paragraphs</button>
+    </div>
+
+
+</body>
+</html>

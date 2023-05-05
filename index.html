@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+    *{
+         
+
+        box-sizing: border-box;
+    }
+
+    body{
+        background: #001e4d;
+        font-family: 'Poppins',sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        
+        
+        }
+        .container{
+               background: #fff;
+               border-radius: 10px;
+               box-shadow: 0 0 10px rgb(100, 100, 100,0.1);
+               width: 600px ;
+               overflow: hidden;
+        }
+        .quiz-header{
+            padding:4rem;
+        }
+        h2{
+            padding: 1rem;
+            text-align: center;
+            margin: 0;
+        }
+       
+
+        
+button{
+    width: 20%;
+    margin-left: 20px;
+}
+
+
+.btn{
+        background: #fff;
+        color: #222;
+        font-weight: 500;
+        border: 1px solid #222; 
+        padding: 10px;
+        margin: 10px 0;
+        text-align: left;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3S;
+        width: 100%;
+    }
+.ans{
+
+
+    background: #fff;
+        color: #222;
+        font-weight: 500;
+        border: 1px solid #222; 
+        padding: 10px;
+        margin: 10px 0;
+        text-align: left;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3S;
+        width: 50%;
+
+}
+
+
+ /* Works for Chrome, Safari, Edge, Opera */
+ input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Works for Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;}
+
+</style>
+</style>
+<body>
+
+    <div class="container">
+        <div class="quiz-header">
+            <h2 id="question">
+                Calculater
+            </h2>
+
+          
+
+        
+
+
+
+                <input type="number" class="btn" id="no1"  placeholder="PLeae enter first number">
+
+                <input  type="number" class="btn" id="no2" placeholder="Please enter second number">
+
+                <center><input  type="text" class="ans" id="ans" readonly  ></center>
+                
+
+
+          
+
+                <button   id="add" style="background: #001e4d; color: aqua;font-size: 20px;">+</button>
+
+                <button  id="sub" style="background: #384d00; color: aqua;font-size: 20px;">-</button>
+
+
+                <button id="mult" style="background: #9b08a0; color: aqua;font-size: 20px;">*</button>
+
+                <button  id="divi" style="margin-bottom: 30px;background: #7a0633; color: aqua;font-size: 20px;" > / </button>
+
+
+                <center>
+                    <button  id="clear" style="margin-left: 50px;margin-bottom: 20px;background: #7a0633; color: aqua;font-size: 20px;">Clear</button>
+
+                </center>
+            
+
+
+
+          
+
+        
+        </div>
+
+
+        
+    </div>
+
+
+    <script type="text/javascript">
+
+
+            var a = document.querySelector('#no1');
+
+            var b = document.querySelector('#no1');
+
+            var c = document.querySelector('#ans');
+
+            document.querySelector('#add').addEventListener('click',()=>{
+                c.value = parseInt(a.value) + parseInt(b.value);
+            })
+
+            var Answer;
+            
+
+    </script>
+</body>
+</html>
